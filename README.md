@@ -35,6 +35,9 @@ func main() {
   multiworld.Worlds.Worlds["world"] = srv.World()
 
   srv.Listen()
+  for p := range srv.Accept() {
+    _ = p
+  }
 }
 ```
 
